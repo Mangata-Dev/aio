@@ -1,17 +1,17 @@
 # 
-from echo.src.echo import (
-  _echo_
+from tick.src.tick import (
+  _tick_
 )
 
 #
 from aiohttp import web
 
 #
-app_echo = web.Application()
+app_tick = web.Application()
 
 #
-app_echo.add_routes([
+app_tick.add_routes([
 
-  web.post('/',   _echo_),
+  web.post('/',   _tick_),
   
 ])

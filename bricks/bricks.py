@@ -26,8 +26,10 @@ app = web.Application(
 )
 
 from echo import app_echo
+from tick import app_tick
 
 app.add_subapp('/echo', app_echo)
+app.add_subapp('/tick', app_tick)
 
 # Configure CORS on all routes.
 cors = aiohttp_cors.setup(app, defaults={
