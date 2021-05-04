@@ -17,6 +17,12 @@ RUN pip install pipenv
 
 COPY bricks/Pipfile bricks/Pipfile.lock ./
 
+RUN pip install --pre gql[aiohttp]
+
+RUN pip install pandas
+
+RUN pip install -U matplotlib
+
 RUN pipenv lock
 
 RUN pipenv install --system --deploy
